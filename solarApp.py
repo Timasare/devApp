@@ -95,8 +95,8 @@ if st.button("Estimate Solar Potential"):
         energy_kWh = estimate_energy_potential(irradiance, area_m2, panel_efficiency)
         panels, inverter_kW, battery_kWh = size_components(energy_kWh)
 
-        cost_per_watt = 1.0
-        bos_cost = 0.5
+        cost_per_watt = 0.5
+        bos_cost = 0.15
         battery_cost = 200
         system_capacity_kW = panels * 0.35
         total_cost = (system_capacity_kW * (cost_per_watt + bos_cost) * 1000 +
